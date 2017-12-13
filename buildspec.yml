@@ -19,6 +19,6 @@ phases:
       - docker push $ECR_REPO:$IMAGE_TAG
       - docker push $ECR_REPO:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"hello-world","imageUri":"%s"}]' $xECR_REPO:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"hello-world","imageUri":"%s"}]' $ECR_REPO:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
